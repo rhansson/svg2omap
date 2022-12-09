@@ -6,6 +6,7 @@ OpenOrienteering Mapper (OOM) currently lacks specific tools for creating map ma
 
 ## Examples
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/NArrow1_arc.svg -ht 2.5`
+![Example 1](/example/Screen Shot Command-Ex1.png)
 
 
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/SBar2-10k.svg -wd 60.157 -u mm -o scalebar1.geojson -dpi 600`
