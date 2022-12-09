@@ -81,7 +81,7 @@ that will be used for the interior rings of the "0":s.
 - `-epsg 32632` specifies [EPSG code](https://epsg.io/).
 - `-rotation 1.98` specifies the map rotation (declination/grivation).
 
-In this example we are forcing an EPSG code and a rotation matching the georeferencing of the map. Normally, this information is automatically extracted from the omap file.
+In this example we are forcing an EPSG code and a rotation matching the georeferencing of the map. Normally, this information is automatically extracted from the omap file if available.
 
 
 ## Limitations
