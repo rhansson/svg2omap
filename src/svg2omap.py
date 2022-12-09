@@ -2,7 +2,7 @@
 #
 # Copyright 2022, Roland Hansson https://github.com/rhansson
 #
-# See license.txt
+# See LICENSE
 # 
 from __future__ import print_function
 import sys, os, errno, time, math
