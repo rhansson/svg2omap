@@ -15,24 +15,29 @@ Download the python file [svg2omap.py](./src/svg2omap.py) or create a clone/fork
 - [numpy](https://pypi.org/project/numpy/)
 
 ## Examples
-### Importing a north arrow
+### Example 1
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/NArrow1_arc.svg -ht 2.5`
 
-The program generates the following output:
+Executing the command generates the following output:
 ![Example 1](./example/Screen%20Shot%20Command-Ex1.png)
 
-`./src/svg2omap.py` is the python program file 
+- `./src/svg2omap.py` is the python program file 
 
-`./example/'Bluff Lake_210404.omap'` the target OOM map file
+- `./example/'Bluff Lake_210404.omap'` the target OOM map file
 
-`./example/NArrow1_arc.svg` the SVG file to import
+- `./example/NArrow1_arc.svg` the SVG file to import
 
-`-ht 2.5` specifies the desired height of the imported SVG graphics in the default unit of centimeters
+- `-ht 2.5` specifies the desired height of the imported SVG graphics in the default unit of centimeters
 
-### Importing a scale bar
+Next import the output geojson file into OOM using the following steps:
+
+1. Select the geojson file
+2. 
+
+### Example 2
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/SBar2-10k.svg -wd 60.157 -u mm -o scalebar1.geojson -dpi 600`
 
-### Importing a logo
+### Example 3
 `python3 ./src/svg2omap.py -m ./example/'complete map.omap' -i ./example/open-orienteering_ill.svg -o oo.geojson -wd 3 -epsg 32632 -rotation 1.98`
 
 ## Limitations
