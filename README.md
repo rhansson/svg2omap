@@ -58,11 +58,11 @@ This imports the file and places it in the map (it may be located outside of the
 
 - `-u mm` specifies that the units for the width are given in millimeters.
 
-- `-o scalebar1.geojson` the name of the output file (default is <input_file>.geojson.
+- `-o scalebar1.geojson` the name of the output file (default is <input_file>.geojson).
 
 - `-dpi 600` the resolution at which the graphics is converted (default is 300).
 
-For this example the given width of the scale bar must match the map scale. In this case including the text "Meters" that extend to the right of the bar.
+For this example, the given width of the scale bar must match the map scale including the text "Meters" to the right of the bar.
 
 ![Example 1](./doc/Screen%20Shot%20Illu_size_sbar2.png)
 
