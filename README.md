@@ -29,10 +29,21 @@ Executing the command generates the following output:
 
 - `-ht 2.5` specifies the desired height of the imported SVG graphics in the default unit of centimeters
 
+
 Next import the output geojson file into OOM using the following steps:
 
-1. Select the geojson file
-2. 
+1. Choose Import from the File menu and select the geojson file.
+![Import file](./example/Screen%20Shot%20Import1.png)
+
+2. Click OK in the symbol mapping menu. 
+![Example 1](./example/Screen%20Shot%20Import_symbol.png)
+This imports the file and places it in the map (it may be located outside of the current map view).
+
+3. Move the selected object to the desired location.
+![Example 1](./example/Screen%20Shot%20Import_place.png)
+
+4. Replace the default symbology as desired
+![Example 1](./example/Screen%20Shot%20Import_replace_symbol.png)
 
 ### Example 2
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/SBar2-10k.svg -wd 60.157 -u mm -o scalebar1.geojson -dpi 600`
