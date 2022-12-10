@@ -64,15 +64,15 @@ This imports the file and places it in the map (it may be located outside of the
 
 For this example, the given width of the scale bar must match the map scale including the text "Meters" to the right of the bar.
 
-![Example 1](./doc/Screen%20Shot%20Illu_size_sbar2.png)
+![Example 2](./doc/Screen%20Shot%20Illu_size_sbar2.png)
 
 In order to fill the outlined text, we need to create a black fill symbol that is below the white "Forest" in the drawing order
 
-![Example 1](./doc/Screen%20Shot%20Import_text-fill.png)
+![Example 2](./doc/Screen%20Shot%20Import_text-fill.png)
 
 that will be used for the interior rings of the "0":s.
 
-![Example 1](./doc/Screen%20Shot%20Import_fill_text_interior.png)
+![Example 2](./doc/Screen%20Shot%20Import_fill_text_interior.png)
 
 
 ### Example 3
@@ -81,14 +81,29 @@ that will be used for the interior rings of the "0":s.
 - `-epsg 32632` specifies [EPSG code](https://epsg.io/).
 - `-rotation 1.98` specifies the map rotation (declination/grivation).
 
-In this example we are forcing an EPSG code and a rotation matching the georeferencing of the map. Normally, this information is automatically extracted from the omap file if available.
+![Example 3](./doc/Screen%20Shot%20Import_oo-logo.png)
+
+In this example we are forcing an EPSG code and a rotation matching the georeferencing of the map. Normally, this information is automatically extracted from the omap file when available.
 
 
 ## Limitations
-x
+
+* Text
+* Compund Paths
+* Compression
 
 ## Usage
-x
 
-## Dependencies
-x
+The following arguments are avilable:
++ `-i  <file name>` SVG input file (***required***).
++ `-o  <file name>` Output geojson file (default: input file name *.geojson).
++ `-m  <file name>` Target OOM (*.omap) file identifying map scale, CRS and declination (default: SVG coords).
++ `-wd <number>` Width of graphic in target (default: SVG coords). **_Notice:_ normally you should specify either width or height.**
++ `-ht <number>` Height of graphic in target (default: SVG coords). **_Notice:_ normally you should specify either width or height.**
++ `-u  <unit>` Units for height/width (default: cm). Choices are: 'mm', 'cm', 'in', 'pt'.
++ `-dpi <number>` Resolution for converting curve paths incl text outlines (default: 300). This is an approximate measure. **_Notice:_ a too high value may not yield a better result.**
++ `-rotation <number>` Rotation of graphic relative to the map measured counterclockwise (default: map declination). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
++ `-epsg <code>` EPSG code (default: map coordinate system as specifired in target omap file). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
++ `-skip_list <list of numbers>` List of id's to ignore. Ex '0,3,9' (default: None). This allows you to filter certain input elements. Id numbers are part of the output properties (attributes). You can inspect them in OOM or a GIS.
++ `-debug <y/n>` Prints debug statements (default: No).")
+
