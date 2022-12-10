@@ -2,7 +2,7 @@
 A python command line tool for importing SVG files into [OpenOrienteering Mapper](https://www.openorienteering.org/)
 
 ## Introduction
-OpenOrienteering Mapper (OOM) currently lacks specific tools for creating map marginalia such as logos, legends, scalebars and so on. It can therefore be easier to create such artwork in a separate graphics program, such as Inkscape or Adobe Illustrator, that can output SVG.
+OpenOrienteering Mapper (OOM) currently lacks specific tools for creating map marginalia such as logos, legends, scale bars and so on. It can therefore be easier to create such artwork in a separate graphics program, such as Inkscape or Adobe Illustrator, that can output SVG.
 **svg2omap** lets you convert an SVG file (*see limitations below*) to GeoJSON that can be imported by OOM. It transforms the SVG into map coordinates matching the coordinate system (typically UTM) of the target omap file and with the desired dimensions.
 
 ## Installation
@@ -60,7 +60,7 @@ This imports the file and places it in the map (it may be located outside of the
 
 - `-o scalebar1.geojson` the name of the output file (default is <input_file>.geojson).
 
-- `-dpi 600` the resolution at which the graphics is converted (default is 300).
+- `-dpi 600` the resolution at which the graphics are converted (default is 300).
 
 For this example, the given width of the scale bar must match the map scale including the text "Meters" to the right of the bar.
 
@@ -88,13 +88,46 @@ In this example we are forcing an EPSG code and a rotation matching the georefer
 
 ## Limitations
 
-* Text
-* Compund Paths
-* Compression
+The intention of the program is to create a starting point for the most intricate layout elements by converting lines, curves and paths. It does not support all parts of the SVG format! The following are the most notable limitations:
+
+- Text
+
+Actual text strings and fonts are not supported. Instead, text must be converted (vectorized) to vector paths in the source SVG (*see Creating Outlined Text below*.
+
+- Compound Paths
+
+So called compound paths are not supported. In illustrator, these can be removed by the Release command:
+
+![Compound Path](./doc/Screen%20Shot%20Illustrator%20Release%20CPath.png)
+
+- Colors
+
+No part of the graphic properties such as color and line width are preserved (only the skeleton). This means that the symbology must be reapplied in OOM (*see Examples above*).
+
+- Compression
+
+Compressed or minified SVG is not supported.
+
+### Creating Outlined Text
+
+Follow these steps to create outlined text:
+
+***Inkscape***
+
+1. Select the text elements
+2. Select Path> Object to Path
+
+![Compound Path](./doc/Screen%20Shot%20Inkscape_Outline-Text.png)
+
+***Illustrator***
+
+1. Choose File> Save As> SVG with the following options:
+
+![Compound Path](./doc/Screen%20Shot%20Illustrator_SaveAs-SVG.png)
 
 ## Usage
 
-The following arguments are avilable:
+The following arguments are available:
 + `-i  <file name>` SVG input file (***required***).
 + `-o  <file name>` Output geojson file (default: input file name *.geojson).
 + `-m  <file name>` Target OOM (*.omap) file identifying map scale, CRS and declination (default: SVG coords).
@@ -103,7 +136,7 @@ The following arguments are avilable:
 + `-u  <unit>` Units for height/width (default: cm). Choices are: 'mm', 'cm', 'in', 'pt'.
 + `-dpi <number>` Resolution for converting curve paths incl text outlines (default: 300). This is an approximate measure. **_Notice:_ a too high value may not yield a better result.**
 + `-rotation <number>` Rotation of graphic relative to the map measured counterclockwise (default: map declination). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
-+ `-epsg <code>` EPSG code (default: map coordinate system as specifired in target omap file). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
++ `-epsg <code>` EPSG code (default: map coordinate system as specified in target omap file). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
 + `-skip_list <list of numbers>` List of id's to ignore. Ex '0,3,9' (default: None). This allows you to filter certain input elements. Id numbers are part of the output properties (attributes). You can inspect them in OOM or a GIS.
 + `-debug <y/n>` Prints debug statements (default: No).")
 
