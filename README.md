@@ -92,11 +92,11 @@ The intention of the program is to create a starting point for the most intricat
 
 - Text
 
-Actual text strings and fonts are not supported. Instead, text must be converted (vectorized) to vector paths in the source SVG (*see Creating Outlined Text below*.
+Actual text strings and fonts are not supported. Instead, text must be vectorized (outlined) in the source SVG (*see Creating Outlined Text below*.
 
 - Compound Paths
 
-So called compound paths are not supported. In illustrator, these can be removed by the Release command:
+So called compound paths are not supported. In Illustrator, these can be removed by the Release command:
 
 ![Compound Path](./doc/Screen%20Shot%20Illustrator%20Release%20CPath.png)
 
