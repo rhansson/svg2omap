@@ -74,6 +74,8 @@ that will be used for the interior rings of the "0":s.
 
 ![Example 2](./doc/Screen%20Shot%20Import_fill_text_interior.png)
 
+![Example 2](./doc/Screen%20Shot%20Import_sbar3.png)
+
 
 ### Example 3
 `python3 ./src/svg2omap.py -m ./example/'complete map.omap' -i ./example/open-orienteering_ill.svg -o oo.geojson -wd 3 -epsg 32632 -rotation 1.98`
