@@ -137,6 +137,6 @@ The following arguments are available:
 + `-dpi <number>` Resolution for converting curve paths incl text outlines (default: 300). This is an approximate measure. **_Notice:_ a too high value may not yield a better result.**
 + `-rotation <number>` Rotation of graphic relative to the map measured counterclockwise (default: map declination). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
 + `-epsg <code>` EPSG code (default: map coordinate system as specified in target omap file). **_Notice:_ Normally, this information is automatically extracted from the omap file when available.**
-+ `-skip_list <list of numbers>` List of id's to ignore. Ex '0,3,9' (default: None). This allows you to filter certain input elements. Id numbers are part of the output properties (attributes). You can inspect them in OOM or a GIS.
++ `-skip_list <list of numbers>` List of id's to ignore. Ex '0,3,9' (default: None). This allows you to filter out certain input elements. Id numbers are part of the output properties (attributes). You can inspect them in OOM or a GIS.
 + `-debug <y/n>` Prints debug statements (default: No).")
 
