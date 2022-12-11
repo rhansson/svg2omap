@@ -3,7 +3,7 @@ A python command line tool for importing SVG files into [OpenOrienteering Mapper
 
 ## Introduction
 OpenOrienteering Mapper (OOM) currently lacks specific tools for creating map marginalia such as logos, legends, scale bars and so on. It can therefore be easier to create such artwork in a separate graphics program, such as Inkscape or Adobe Illustrator, that can output SVG.
-**svg2omap** lets you convert an SVG file (*see limitations below*) to GeoJSON that can be imported by OOM. It transforms the SVG into map coordinates matching the coordinate system (typically UTM) of the target omap file and with the desired dimensions.
+**svg2omap** lets you convert an SVG file [(see limitations below)](#limitations) to GeoJSON that can be imported by OOM. It transforms the SVG into map coordinates matching the coordinate system (typically UTM) of the target omap file and with the desired dimensions.
 
 ## Installation
 Download the python file [svg2omap.py](./src/svg2omap.py) or create a clone/fork.
@@ -94,7 +94,7 @@ The intention of the program is to create a starting point for the most intricat
 
 - Text
 
-Actual text strings and fonts are not supported. Instead, text must be vectorized (outlined) in the source SVG (*see Creating Outlined Text below*.
+Actual text strings and fonts are not supported. Instead, text must be vectorized (outlined) in the source SVG [(see Creating Outlined Text below)](#creating-outlined-text).
 
 - Compound Paths
 
@@ -104,7 +104,7 @@ So called compound paths are not supported. In Illustrator, these can be removed
 
 - Colors
 
-No part of the graphic properties such as color and line width are preserved (only the skeleton). This means that the symbology must be reapplied in OOM (*see Examples above*).
+No part of the graphic properties such as color and line width are preserved (only the skeleton). This means that the symbology must be reapplied in OOM [(see Examples above)](#examples).
 
 - Compression
 
