@@ -3,7 +3,7 @@ A python command line tool for importing SVG files into [OpenOrienteering Mapper
 
 ## Introduction
 OpenOrienteering Mapper (OOM) currently lacks specific tools for creating map marginalia such as logos, legends, scale bars and so on. It can therefore be easier to create such artwork in a separate graphics program, such as Inkscape or Adobe Illustrator, that can output SVG.
-**svg2omap** lets you convert an SVG file [(see limitations below)](#limitations) to GeoJSON that can be imported by OOM. It transforms the SVG into map coordinates matching the coordinate system (typically UTM) of the target omap file and with the desired dimensions.
+**svg2omap** lets you convert an SVG file [(see limitations below)](#limitations) to GeoJSON that can be imported by OOM. It transforms the SVG into map coordinates matching the coordinate system (typically UTM) of the target omap file and with the desired page dimensions.
 
 ## Installation
 Download the python file [svg2omap.py](./src/svg2omap.py) or create a clone/fork.
