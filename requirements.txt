@@ -1,0 +1,4 @@
+svgpathtools
+pyproj
+geojson
+numpy
