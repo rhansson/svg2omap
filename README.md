@@ -14,6 +14,11 @@ Download the python file [svg2omap.py](./src/svg2omap.py) or create a clone/fork
 - [geojson](https://pypi.org/project/geojson/)
 - [numpy](https://pypi.org/project/numpy/)
 
+These are listed in the `requirements.txt` file and can be installed using pip by running:
+```sh
+pip install -r requirements.txt
+```
+
 ## Examples
 ### Example 1
 `python3 ./src/svg2omap.py -m ./example/'Bluff Lake_210404.omap' -i ./example/NArrow1_arc.svg -ht 2.5`
