@@ -285,7 +285,7 @@ class Converter(object):
         # Determine center coord
         cx = xmin+(width_px/2)
         cy = ymin+(height_px/2)
-        pt_cen = np.complex(cx, cy)
+        pt_cen = complex(cx, cy)
 
         features = []
         i = 0
